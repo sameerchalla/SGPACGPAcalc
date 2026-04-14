@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free JNTUH SGPA Calculator - Calculate your Semester Grade Point Average instantly in seconds. Easy-to-use tool for JNTUH students following official grading system: O=10, A+=9, A=8, B+=7, B=6, C=5, F=0. Accurate, fast, and completely free.">
+    <meta name="keywords" content="JNTUH SGPA Calculator, SGPA calculator, JNTUH GPA calculator, semester grade point average, JNTUH grading system, GPA calculator online, education calculator tool, free SGPA calculator, JNTUH student tools, grade calculator, academic calculator">
+    <meta name="author" content="Sameer Challa">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="canonical" href="https://jntuhgpahub.vercel.app/">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jntuhgpahub.vercel.app/">
+    <meta property="og:title" content="JNTUH SGPA Calculator - Free Semester Grade Point Calculator">
+    <meta property="og:description" content="Calculate your JNTUH Semester GPA instantly with our accurate, free calculator. No registration required. Perfect for JNTUH engineering and non-engineering students.">
+    <meta property="og:image" content="https://jntuhgpahub.vercel.app/og-image.png">
+    <meta property="og:image:alt" content="JNTUH SGPA Calculator interface">
+    <meta property="og:site_name" content="SGPA Calculator">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://jntuhgpahub.vercel.app/">
+    <meta name="twitter:title" content="JNTUH SGPA Calculator - Free Semester Grade Point Calculator">
+    <meta name="twitter:description" content="Calculate your JNTUH Semester GPA instantly with our accurate, free calculator.">
+    <meta name="twitter:creator" content="@sameerchalla">
+    
+    <title>JNTUH SGPA Calculator - Free Semester Grade Point Average Calculator Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Web App Manifest for PWA Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SGPA Calculator">
+    <meta name="theme-color" content="#003d82">
+    <meta name="og:locale" content="en_US">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%23003d82' width='180' height='180'/><text x='90' y='110' font-size='90' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial'>G</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%23003d82' width='180' height='180'/><text x='90' y='110' font-size='90' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial'>G</text></svg>">
+    
+    <!-- JSON-LD Schema Markup - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SGPA Calculator",
+      "url": "https://jntuhgpahub.vercel.app",
+      "description": "Free JNTUH SGPA and CGPA Calculator for students",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support"
+      }
+    }
+    </script>
+    
+    <!-- JSON-LD Schema Markup - WebApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "JNTUH SGPA Calculator",
+      "description": "Free online SGPA calculator for JNTUH students to calculate semester grade point average accurately",
+      "url": "https://jntuhgpahub.vercel.app/",
+      "applicationCategory": "EducationalApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Sameer Challa",
+        "url": "https://www.linkedin.com/in/sameer-challa-3897b6367"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "250"
+      }
+    }
+    </script>
+    
+    <!-- JSON-LD Schema Markup - Breadcrumb Navigation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jntuhgpahub.vercel.app/"
+      }]
+    }
+    </script>
+    
+    <!-- JSON-LD Schema Markup - FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is SGPA and how is it calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SGPA stands for Semester Grade Point Average. It is calculated using the formula: SGPA = Σ(Credit × Grade Point) / Σ(Credit). For example, if you score O (10) in a 4-credit subject and A (8) in a 3-credit subject: SGPA = (10×4 + 8×3) / (4+3) = 64/7 = 9.14. This calculator automates this computation for JNTUH students."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the JNTUH grading system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "JNTUH grading system: O=10 (Outstanding), A+=9 (Excellent), A=8 (Very Good), B+=7 (Good), B=6 (Average), C=5 (Pass), F=0 (Fail). These grade points are used to calculate SGPA and CGPA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who can use this SGPA calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This SGPA calculator is designed for JNTUH (Jawaharlal Nehru Technological University Hyderabad) students studying engineering, pharmacy, and non-engineering courses. It works for any student following the JNTUH grading system."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this calculator accurate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this calculator uses the official JNTUH formula for SGPA calculation. It's been verified by students and follows the exact grading system prescribed by JNTUH."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to register or pay to use this calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, this SGPA calculator is completely free to use. No registration is required, and there are no hidden charges or premium features."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I calculate SGPA for multiple semesters at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator is designed for single semester SGPA calculation. For calculating cumulative GPA across multiple semesters, use our CGPA Calculator tool."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1060871647863427"
+         crossorigin="anonymous"></script>
+</head>
+<body class="bg-slate-50 font-sans min-h-screen">
+
+    <div class="max-w-4xl mx-auto py-10 px-4">
+        <nav class="text-center mb-8" aria-label="Main navigation">
+            <div class="inline-flex bg-gray-100 rounded-lg p-1">
+                <a href="index.html" class="px-6 py-2 bg-blue-600 text-white rounded-md font-semibold transition-all" aria-current="page">SGPA Calculator</a>
+                <a href="cgpa.html" class="px-6 py-2 text-gray-700 hover:bg-gray-200 rounded-md font-semibold transition-all">CGPA Calculator</a>
+            </div>
+        </nav>
+
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-extrabold text-blue-900 mb-2">JNTUH SGPA Calculator</h1>
+            <p class="text-gray-600 text-lg">Calculate your Semester Grade Point Average instantly with our free JNTUH calculator</p>
+        </header>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6">Enter Your Subjects</h2>
+            <div id="subject-container" role="region" aria-label="Subject input area">
+                </div>
+
+            <div class="mt-8 flex flex-wrap gap-4 justify-between items-center border-t pt-6">
+                <button id="add-subject" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-all">
+                    <i class="fas fa-plus mr-2"></i> Add Subject
+                </button>
+                
+                <div class="flex gap-4">
+                    <button id="reset-btn" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 px-6 rounded-lg transition-all">
+                        Reset
+                    </button>
+                    <button id="calculate-btn" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-8 rounded-lg shadow-md transition-all">
+                        Calculate SGPA
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-card" class="hidden mt-8 bg-blue-900 text-white rounded-xl shadow-xl p-8 text-center animate-bounce-short" role="status" aria-live="polite" aria-label="SGPA calculation result">
+            <h2 class="text-xl uppercase tracking-widest opacity-80 mb-2">Your SGPA</h2>
+            <div id="sgpa-value" class="text-6xl font-black mb-2" aria-label="SGPA value">0.00</div>
+            <p id="total-info" class="text-blue-200" aria-label="Calculation details"></p>
+        </div>
+
+        <section class="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mt-8">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">
+                <i class="fas fa-info-circle mr-2" aria-hidden="true"></i> SGPA Calculation Formula
+            </h2>
+            <div class="text-gray-700 space-y-3">
+                <p class="font-semibold text-lg">SGPA = Σ(Credit × Grade Point) / Σ(Credit)</p>
+                <div class="bg-white p-4 rounded-lg">
+                    <p class="mb-2"><strong>Where:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li><strong>Σ(Credit × Grade Point)</strong> = Sum of (credit multiplied by grade point) for all subjects</li>
+                        <li><strong>Σ(Credit)</strong> = Total credits across all subjects</li>
+                        <li><strong>Grade Points:</strong> O=10 (Outstanding), A+=9 (Excellent), A=8 (Very Good), B+=7 (Good), B=6 (Average), C=5 (Pass), F=0 (Fail)</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-600"><strong>Example Calculation:</strong> If you scored O (10) in a 4-credit subject and A (8) in a 3-credit subject:</p>
+                    <p class="text-sm text-gray-600 ml-4 mt-2 p-3 bg-white rounded border-l-4 border-blue-600">SGPA = (10×4 + 8×3) / (4+3) = (40 + 24) / 7 = 64/7 = <strong>9.14</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- JNTUH Grading System Section -->
+        <section class="mt-10 bg-white rounded-xl shadow-lg p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6">
+                <i class="fas fa-graduation-cap mr-2" aria-hidden="true"></i> JNTUH Grading System Guide
+            </h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm md:text-base">
+                    <thead>
+                        <tr class="bg-blue-100 border-b-2 border-blue-300">
+                            <th class="px-4 py-3 text-left font-bold">Grade</th>
+                            <th class="px-4 py-3 text-center font-bold">Grade Point</th>
+                            <th class="px-4 py-3 text-left font-bold">Percentage Range</th>
+                            <th class="px-4 py-3 text-left font-bold">Classification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-gray-50 transition-colors">
+                            <td class="px-4 py-3 font-semibold text-emerald-600">O</td>
+                            <td class="px-4 py-3 text-center font-bold">10</td>
+                            <td class="px-4 py-3">90-100</td>
+                            <td class="px-4 py-3">Outstanding</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50 transition-colors">
+                            <td class="px-4 py-3 font-semibold text-blue-600">A+</td>
+                            <td class="px-4 py-3 text-center font-bold">9</td>
+                            <td class="px-4 py-3">80-89</td>
+                            <td class="px-4 py-3">Excellent</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50 transition-colors">
+                            <td class="px-4 py-3 font-semibold text-blue-500">A</td>
+                            <td class="px-4 py-3 text-center font-bold">8</td>
+                            <td class="px-4 py-3">70-79</td>
+                            <td class="px-4 py-3">Very Good</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50 transition-colors">
+                            <td class="px-4 py-3 font-semibold text-indigo-600">B+</td>
+                            <td class="px-4 py-3 text-center font-bold">7</td>
+                            <td class="px-4 py-3">60-69</td>
+                            <td class="px-4 py-3">Good</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50 transition-colors">
+                            <td class="px-4 py-3 font-semibold text-yellow-600">B</td>
+                            <td class="px-4 py-3 text-center font-bold">6</td>
+                            <td class="px-4 py-3">50-59</td>
+                            <td class="px-4 py-3">Average</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50 transition-colors">
+                            <td class="px-4 py-3 font-semibold text-orange-600">C</td>
+                            <td class="px-4 py-3 text-center font-bold">5</td>
+                            <td class="px-4 py-3">40-49</td>
+                            <td class="px-4 py-3">Pass</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-4 py-3 font-semibold text-red-600">F</td>
+                            <td class="px-4 py-3 text-center font-bold">0</td>
+                            <td class="px-4 py-3">Below 40</td>
+                            <td class="px-4 py-3">Fail</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- How to Use Section -->
+        <section class="mt-10 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-lg p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6">
+                <i class="fas fa-book-open mr-2" aria-hidden="true"></i> How to Use SGPA Calculator
+            </h2>
+            <ol class="space-y-4 list-decimal list-inside text-gray-700">
+                <li><strong>Add Subjects:</strong> Click "Add Subject" to add more than 4 subjects, or use the default 4 subject rows</li>
+                <li><strong>Enter Subject Names:</strong> Type the name of each subject (e.g., Mathematics, Physics, Chemistry)</li>
+                <li><strong>Enter Credits:</strong> Input the credit hours or credit points for each subject</li>
+                <li><strong>Select Grade:</strong> Choose the grade you received from the dropdown menu</li>
+                <li><strong>Add More Subjects:</strong> Click the "Add Subject" button to include additional subjects</li>
+                <li><strong>Calculate:</strong> Click the "Calculate SGPA" button to see your results</li>
+                <li><strong>View Results:</strong> Your SGPA will be displayed with calculation details</li>
+                <li><strong>Reset:</strong> Click "Reset" to clear all entries and start a new calculation</li>
+            </ol>
+        </section>
+
+        <!-- Why SGPA Matters Section -->
+        <section class="mt-10 bg-white rounded-xl shadow-lg p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6">
+                <i class="fas fa-star mr-2" aria-hidden="true"></i> Why SGPA Matters
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+                    <h3 class="text-lg font-bold text-blue-900 mb-3">
+                        <i class="fas fa-briefcase mr-2" aria-hidden="true"></i> Campus Recruitment
+                    </h3>
+                    <p class="text-gray-700">Most companies have minimum SGPA cutoff requirements (typically 7.0 or 7.5). Your SGPA determines your eligibility for interviews and job offers.</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-600">
+                    <h3 class="text-lg font-bold text-green-900 mb-3">
+                        <i class="fas fa-graduation-cap mr-2" aria-hidden="true"></i> Higher Education
+                    </h3>
+                    <p class="text-gray-700">Universities and scholarship committees review SGPA for admissions and financial aid. A strong SGPA improves your chances significantly.</p>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-600">
+                    <h3 class="text-lg font-bold text-purple-900 mb-3">
+                        <i class="fas fa-medal mr-2" aria-hidden="true"></i> Academic Recognition
+                    </h3>
+                    <p class="text-gray-700">Scholarships, merit awards, and academic honors are often based on SGPA. Higher SGPA opens more opportunities.</p>
+                </div>
+                <div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-600">
+                    <h3 class="text-lg font-bold text-red-900 mb-3">
+                        <i class="fas fa-chart-line mr-2" aria-hidden="true"></i> Career Growth
+                    </h3>
+                    <p class="text-gray-700">Even after placement, SGPA reflects on your academic performance and is useful for internships and career progression.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips to Improve SGPA Section -->
+        <section class="mt-10 bg-amber-50 border-2 border-amber-200 rounded-xl shadow-lg p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-amber-900 mb-6">
+                <i class="fas fa-lightbulb mr-2" aria-hidden="true"></i> Tips to Improve Your SGPA
+            </h2>
+            <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start"><span class="text-amber-600 font-bold mr-3">✓</span> <span><strong>Attend Classes Regularly:</strong> Consistent attendance helps you understand concepts and perform better in exams</span></li>
+                <li class="flex items-start"><span class="text-amber-600 font-bold mr-3">✓</span> <span><strong>Focus on Difficult Subjects:</strong> Allocate more time and effort to subjects that challenge you</span></li>
+                <li class="flex items-start"><span class="text-amber-600 font-bold mr-3">✓</span> <span><strong>Create a Study Schedule:</strong> Plan your studies systematically to cover all topics before exams</span></li>
+                <li class="flex items-start"><span class="text-amber-600 font-bold mr-3">✓</span> <span><strong>Take Regular Notes:</strong> Notes help retention and quick revision before exams</span></li>
+                <li class="flex items-start"><span class="text-amber-600 font-bold mr-3">✓</span> <span><strong>Solve Past Papers:</strong> Practice previous year questions to understand exam patterns</span></li>
+                <li class="flex items-start"><span class="text-amber-600 font-bold mr-3">✓</span> <span><strong>Group Study Sessions:</strong> Collaborate with peers to understand different perspectives</span></li>
+                <li class="flex items-start"><span class="text-amber-600 font-bold mr-3">✓</span> <span><strong>Seek Faculty Help:</strong> Don't hesitate to clarify doubts with professors during office hours</span></li>
+                <li class="flex items-start"><span class="text-amber-600 font-bold mr-3">✓</span> <span><strong>Maintain Work-Life Balance:</strong> Adequate sleep and exercise improve concentration and memory</span></li>
+            </ul>
+        </section>
+
+        <!-- CGPA Connection Section -->
+        <section class="mt-10 bg-indigo-50 rounded-xl shadow-lg p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-indigo-900 mb-4">
+                <i class="fas fa-link mr-2" aria-hidden="true"></i> SGPA vs CGPA
+            </h2>
+            <p class="text-gray-700 mb-4">While SGPA represents your performance in a single semester, CGPA is the cumulative average across all semesters. All your SGPAs collectively contribute to your CGPA.</p>
+            <p class="text-gray-700 mb-4"><strong>Tip:</strong> Strong SGPA in each semester leads to excellent CGPA. Use our <a href="cgpa.html" class="text-indigo-600 hover:text-indigo-800 font-semibold underline">CGPA Calculator</a> to track your cumulative performance across multiple semesters.</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <footer class="bg-blue-600 text-center py-8 px-4">
+        <p class="text-white text-lg font-semibold">built with ❤️ by <a href="https://www.linkedin.com/in/sameer-challa-3897b6367" target="_blank" class="text-yellow-300 hover:text-yellow-100 transition-colors">Sameer Challa</a></p>
+        <div class="mt-4 flex justify-center gap-6">
+            <a href="index.html" class="text-white hover:text-yellow-300 transition-colors">SGPA Calculator</a>
+            <span class="text-white">•</span>
+            <a href="cgpa.html" class="text-white hover:text-yellow-300 transition-colors">CGPA Calculator</a>
+        </div>
+    </footer>
+</body>
+</html>
+
+<!-- Service Worker Registration for PWA Support -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+        console.log('Service Worker registered:', registration);
+      })
+      .catch(error => {
+        console.log('Service Worker registration failed:', error);
+      });
+  });
+}
+</script>

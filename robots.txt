@@ -1,0 +1,26 @@
+# SGPA Calculator - Robots.txt
+# Allows all bots to crawl and index the website
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /cgpa.html
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /private/
+
+# Specific crawl delay for politeness
+Crawl-delay: 1
+
+# Allow specific search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Point to sitemap
+Sitemap: https://sgpacalc.example.com/sitemap.xml
